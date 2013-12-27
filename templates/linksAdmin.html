@@ -1,0 +1,60 @@
+{% extends "baseAdmin.html" %}
+{% set active_page = 'links' %}
+{% block content %}
+
+<script src="static/js/ckeditor/ckeditor.js"></script>
+<script>
+
+	// This code is generally not necessary, but it is here to demonstrate
+	// how to customize specific editor instances on the fly. This fits well
+	// this demo because we have editable elements (like headers) that
+	// require less features.
+
+	// The "instanceCreated" event is fired for every editor instance created.
+	CKEDITOR.on( 'instanceCreated', function( event ) {
+		var editor = event.editor,
+			element = editor.element;
+			editor.config.extraPlugins = 'sourcedialog'
+	});
+
+
+</script>	
+<script>
+function myFunc(){
+
+	data = "content=" + document.getElementById('contentArea').innerHTML;
+	makeRequests('POST','/linksAdmin',saveLinksHandler, data)
+
+}
+function saveLinksHandler(){
+	if (httpRequest.readyState === 4) 
+    {  
+        alert(httpRequest.responseText) 
+
+    }    
+}
+</script>
+
+<div class="container">
+	<div class="page-header">
+		<h1>Links</h1><br>
+		<p class="lead">Use o formulário abaixo para adicionar um aplicativo a nossa lista</p>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<div id="contentArea" contentEditable="true">
+				{{links| safe}}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+<!-- 		<div class="span12">
+			<center>
+				<a onclick="myFunc();"><button type="button" class="btn-primary btn">Salvar</button></a>
+				<a href="javascript:history.go(0)"><button type="button" class="btn" >Cancelar</button></a>
+			</center>
+		</div> -->
+	</div>
+</div>
+
+{% endblock content %}

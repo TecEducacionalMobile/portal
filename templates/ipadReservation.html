@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% set active_page = 'reserva' %}
+{% block content %}
+<div class="container">
+	<div class="page-header">
+		<h1>Reserva de iPads</h1><br>
+		<p class="lead">Para efetuar a sua reserva, preencha o formulário abaixo. Por favor, verifique antes, no calendário, se o horário e quantidade de iPads desejados estão disponíveis.</p>
+	</div>
+	<div class="row">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href='#calendar' class="active" data-toggle='tab'>Calendário</a></li>
+			<li><a href="#form" data-toggle='tab'>Formulário</a></li>
+		</ul>
+		<div class="tab-content">
+		  <div class="tab-pane active" id="calendar"><iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23ffffff&amp;src=teceducacionalmobile%40gmail.com&amp;color=%232F6309&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="no"></iframe></div>
+		  <div class="tab-pane" id="form"><iframe src="/ipadReservationForm?params={{params}}" width="100%" height="1200px">
+			</iframe></div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock content %}

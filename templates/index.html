@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% set active_page='home' %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="column12">
+				<div id="myCarousel" class="carousel slide hidden-phone">
+				  <ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				  </ol>
+				  <!-- Carousel items -->
+				  <div class="carousel-inner" style="width:100%;height:400px">
+				    <div class="active item">
+		               <div style="background-image:url('/static/img/banner1.png'); width:100%; height:400px; background-size:cover">
+		               </div>
+				    	<div class="carousel-caption">
+				    		<h4>Bem-Vindo ao novo portal da Tecnologia Educacional Móbile!</h4>
+				    		<p></p>
+				    	</div>
+				    </div>
+				    <div class="item">
+		               <div style="background-image:url('/static/img/banner3.jpg'); height:400px; width:1200px; background-size:cover">
+		               </div>
+				    	<div class="carousel-caption">
+				    		<h4><a href="http://www.escolamobile.com.br/tablets-na-sala-de-aula/" target="_blank">iPads em Sala De Aula</a></h4> 
+				    		<p>Tablets e recursos tecnológicos estão cada vez mais...</p>
+				    	</div>
+				    </div>
+				  </div>
+				  <!-- Carousel nav -->
+				  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+				</div>
+			</div>
+    	</div>
+    	<div class="row">
+			<div class="span6">
+				<h1>Apresentação</h1>
+				<p class="lead">
+					O Portal Móbile de Tecnologia Educacional é uma revista eletrônica na qual serão publicados, regularmente, diversos tipos de materiais de apoio à equipe pedagógica com o objetivo de aproximar a tecnologia da sala de aula.
+
+Esperamos torná-lo um ponto de referência em que você encontrará informações sobre ferramentas tecnológicas, aplicativos, atividades didáticas e experiências de outros colegas.
+
+Além de material produzido pela área de Tecnologia Educacional, também serão disponibilizados artigos e tutoriais publicados em outros locais.<br><br>
+
+Abraços<br><br>
+
+Julio, Carlos Eduardo (Amparo), e Felipe Cocco<br><br>
+
+Tecnologia Educacional Móbile - Email: tec.educacional@escolamobile.com.br
+    		</div>
+    		<div class="span6">
+    			<a class="twitter-timeline" href="https://twitter.com/tec_educacional" data-widget-id="365173112062488577">Tweets de @tec_educacional</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</div>
+
+    </div> 
+{% endblock content %}

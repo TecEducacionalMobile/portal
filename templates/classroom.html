@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <title>
+            My Classroom - Mobile Virtual
+        </title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href='//fonts.googleapis.com/css?family=Karla:400,700,400italic' rel='stylesheet' type='text/css'>
+        <!-- <link href="/static/css/bootstrap-responsive.css" rel="stylesheet"> -->
+        <link href="/static/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/css/animate.css" rel="stylesheet">
+        <link href="/static/css/theme.css" rel="stylesheet">
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand scroller" href="/">
+                        <small> Móbile Virtual Teste</small>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <div class="btn-group">
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="icon-user"></i>
+                                    Usuario
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <a href="/profile/">Perfil</a>
+                                    <li class="divider"></li>
+                                    <a href="/logout"></a>Sair<i class="icon-off"></i>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <ul class="nav nav-tabs" id="courseFeatures">
+                        <li>
+                            <a href="#overview" data-toggle="tab">Course Title</a>
+                        </li>
+                        <li>
+                            <a href="#videos" data-toggle="tab">Course Title</a>
+                        </li>
+                        <li>
+                            <a href="#exercises" data-toggle="tab">Course Title</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="overview">
+                            Overview of the course
+                        </div>
+                        <div class="tab-pane" id="videos">
+                            <div class="span3">
+                                <div class="accordion" id="lessonList">
+                                    <div class="accordion-group">
+                                        <div class="accordion-heading" style="background-color:#CDCDCD;">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#lessonList" href="#unit1">
+                                               <center>Unit 1 </center>
+                                            </a>
+                                        </div>
+                                        <div id="unit1" class="accordion-body collapse"style="background-color:white">
+                                            <div class="accordion-inner">
+                                                <ul class="nav nav-list">
+                                                  <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+                                                  <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
+                                                  <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
+                                                  <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+                                                  <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+                                                  <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
+                                                  <li><a href="#icons"><i class="icon-chevron-right"></i> Icons by Glyphicons</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-heading" style="background-color:#CDCDCD;">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#lessonList" href="#unit2">
+                                               <center>Unit 1 </center>
+                                            </a>
+                                        </div>
+                                        <div id="unit2" class="accordion-body collapse"style="background-color:white">
+                                            <div class="accordion-inner">
+                                                <ol>
+                                                    <li>Less1</li>
+                                                    <li>Less2</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-heading" style="background-color:#CDCDCD;">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#lessonList" href="#unit3">
+                                               <center>Unit 1 </center>
+                                            </a>
+                                        </div>
+                                        <div id="unit3" class="accordion-body collapse"style="background-color:white">
+                                            <div class="accordion-inner">
+                                                <ol>
+                                                    <li>Less1</li>
+                                                    <li>Less2</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span7 offset1">
+                                <div id="player"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="exercises">
+                          <div class="span12">
+                            <iframe src="/khan-exercises/exercises/slope_of_a_line.html" seamless style="width:100%; height:100%"></iframe>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      // This is a protocol-relative URL as described here:
+      //     http://paulirish.com/2010/the-protocol-relative-url/
+      // If you're testing a local page accessed via a file:/// URL, please set tag.src to
+      //     "https://www.youtube.com/iframe_api" instead.
+      tag.src = "//www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '400',
+          width: '640',
+          videoId: 'u1zgFlCw8Aw',
+          playerVars: {
+            wmode: "opaque"
+        },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        // event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+    </body>
+</html>
+
+
+ 

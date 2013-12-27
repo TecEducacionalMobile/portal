@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>
+Biologia | Polinize
+</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" type="image/png" href="/static/img/icon.png">
+            <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+            <link href="/static/css/bootstrap.css" rel="stylesheet">
+            <link href="/static/css/base.css" rel="stylesheet">
+            <link href="/static/css/jquery.autocomplete.css" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="/static/css/theme.css">
+            <link rel="stylesheet" type="text/css" href="/static/css/animate.css">
+            <link rel="stylesheet" type="text/css" href="/static/css/external-pages.css">
+            <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+            
+            
+
+            
+            
+    </head>
+    
+    <body>
+
+        <a href="#" class="scrolltop">
+            <span>&ensp;&uarr;</span>
+        </a>
+
+        <!-- begins navbar -->
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand scroller" data-section="#" href="/">
+                    <small>Testing Suite</small>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav pull-right">
+                        
+                        <div class="btn-group">
+                          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                              <i class="icon-user"></i> felipecocco
+                            <span class="caret"></span>
+                          </a>
+                            <ul class="dropdown-menu">
+                                <a href='/perfil/'>Meu Perfil</a>
+                                <li class="divider"></li>
+                                <a href="/logout/"><i class="icon-off"></i> Sair</a>
+                           </ul>
+                        </div>
+                        
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- ends navbar -->
+
+        
+        <!-- start wrapper -->
+        <div id="wrap">
+        
+<div class="container main-container">
+    <ul class="nav nav-tabs curso-nav">
+      <li class="">
+        <a href="/curso/12/"><i class="icon-home"></i> Descrição</a>
+      </li>
+      
+      
+      <li class="active"><a href="/curso/12/sala/"><i class="icon-film"></i> Sala de Aula</a></li>
+      
+      
+      <li class=" "><a href="/curso/12/discussoes/"><i class="icon-comment"></i> Discussões</a></li>
+      
+      
+      
+      <li class=" "><a href="/curso/12/progresso/"><i class="icon-tasks"></i> Progresso</a></li>
+      
+      
+    </ul>
+    <div class="row-fluid side-border curso-background"> 
+        
+            <div class="curso-classroom-video span8">
+                <div id="player"></div>
+            </div>
+            <div class="span4 curso-classroom-summary">
+                <h5>Capítulos</h5>
+                <div class="accordion" id="class-panel">
+                
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse1">
+                         Biologia Celular
+                      </a>
+                    </div>
+                    <div id="collapse1" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="sZolyh8GfTI" onclick="openVideo('sZolyh8GfTI')"
+                                    
+                                        class="watching_video">Glicólise </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="D5e1a0SunDA" onclick="openVideo('D5e1a0SunDA')"
+                                    
+                                        class="watched_video">Ciclo de Krebs </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="dRLfcigsuyE" onclick="openVideo('dRLfcigsuyE')"
+                                    
+                                        >Cadeia Respiratória</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="MlpwN9-uV_U" onclick="openVideo('MlpwN9-uV_U')"
+                                    
+                                        >Fermentação</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="6vL6rJxAs3w" onclick="openVideo('6vL6rJxAs3w')"
+                                    
+                                        >Fotossíntese I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="KKFKQ6TufYs" onclick="openVideo('KKFKQ6TufYs')"
+                                    
+                                        >Fotossíntese II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="mWgi_oDWiUQ" onclick="openVideo('mWgi_oDWiUQ')"
+                                    
+                                        >Fotossíntese e Evolução</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="TrIV2KKQZzM" onclick="openVideo('TrIV2KKQZzM')"
+                                    
+                                        >Ciclo Celular</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="9GhnO3czYNY" onclick="openVideo('9GhnO3czYNY')"
+                                    
+                                        >Ciclo Celular - Mitose</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="3noo_F4ayX0" onclick="openVideo('3noo_F4ayX0')"
+                                    
+                                        >Meiose I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="kki4YZfP2k8" onclick="openVideo('kki4YZfP2k8')"
+                                    
+                                        >Meiose II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse2">
+                        Botânica
+                      </a>
+                    </div>
+                    <div id="collapse2" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="DY_bYOyHKBE" onclick="openVideo('DY_bYOyHKBE')"
+                                    
+                                        class="watching_video">Briófitas </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="psIdyUQDSIo" onclick="openVideo('psIdyUQDSIo')"
+                                    
+                                        >Pteridófitas</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="GwMApqsQ6ag" onclick="openVideo('GwMApqsQ6ag')"
+                                    
+                                        >Gimnospermas</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="6iP-DaDV3cQ" onclick="openVideo('6iP-DaDV3cQ')"
+                                    
+                                        >Angiospermas</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse3">
+                        Ecologia
+                      </a>
+                    </div>
+                    <div id="collapse3" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="swVEFDCWK8E" onclick="openVideo('swVEFDCWK8E')"
+                                    
+                                        >Cadeia Alimentar</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="hxU-AZGwuH0" onclick="openVideo('hxU-AZGwuH0')"
+                                    
+                                        >Pirâmides Ecológicas</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="XkiHM8ZwP5I" onclick="openVideo('XkiHM8ZwP5I')"
+                                    
+                                        >Ciclo do Carbono</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="TL0OykR7pTU" onclick="openVideo('TL0OykR7pTU')"
+                                    
+                                        >Nicho Ecológico</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="aEFEK1AFrws" onclick="openVideo('aEFEK1AFrws')"
+                                    
+                                        >Potencial Biótico</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse4">
+                        Evolução
+                      </a>
+                    </div>
+                    <div id="collapse4" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="1f1Un5voNs0" onclick="openVideo('1f1Un5voNs0')"
+                                    
+                                        >Lamarckismo</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="OigUqkBEV5w" onclick="openVideo('OigUqkBEV5w')"
+                                    
+                                        >Darwinismo I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="b9lrXDNyjwM" onclick="openVideo('b9lrXDNyjwM')"
+                                    
+                                        >Darwinismo II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="ZRDOlWSqmm0" onclick="openVideo('ZRDOlWSqmm0')"
+                                    
+                                        >Homologia x Homoplasia</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="VTI0hdC_oUY" onclick="openVideo('VTI0hdC_oUY')"
+                                    
+                                        >Criação e Evolução</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="ftzx8uwe6Yk" onclick="openVideo('ftzx8uwe6Yk')"
+                                    
+                                        >Prova I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="qV3K1agMFDE" onclick="openVideo('qV3K1agMFDE')"
+                                    
+                                        >Prova II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="j2qI6sdjOnI" onclick="openVideo('j2qI6sdjOnI')"
+                                    
+                                        >A Causa Sagrada de Darwin</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse5">
+                        Genética
+                      </a>
+                    </div>
+                    <div id="collapse5" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="OSrVjUiWSjA" onclick="openVideo('OSrVjUiWSjA')"
+                                    
+                                        >Por que Ervilhas?</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="YI7q4Du0uvQ" onclick="openVideo('YI7q4Du0uvQ')"
+                                    
+                                        >1ª Lei de Mendel</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="cn2NSUiylbg" onclick="openVideo('cn2NSUiylbg')"
+                                    
+                                        >Exercícios (1ª Lei de Mendel)</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="ATpsqp866b0" onclick="openVideo('ATpsqp866b0')"
+                                    
+                                        >2ª Lei de Mendel</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="xOhUYlr-luU" onclick="openVideo('xOhUYlr-luU')"
+                                    
+                                        >Mendelismo</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="0DzBq2T2mC0" onclick="openVideo('0DzBq2T2mC0')"
+                                    
+                                        >Ligação Gênica (Linkage) I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="0fY5qAFMcsc" onclick="openVideo('0fY5qAFMcsc')"
+                                    
+                                        >Ligação Gênica II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="1P4cGRV5Z0Y" onclick="openVideo('1P4cGRV5Z0Y')"
+                                    
+                                        >Ligação Gênica III</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="sOSzUrPuba0" onclick="openVideo('sOSzUrPuba0')"
+                                    
+                                        >Proteínas</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="vX64TGMdeR8" onclick="openVideo('vX64TGMdeR8')"
+                                    
+                                        class="watching_video">DNA - Estrutura </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="NMObWWt_yrc" onclick="openVideo('NMObWWt_yrc')"
+                                    
+                                        class="watching_video">DNA - replicação </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="slbqqALkCaA" onclick="openVideo('slbqqALkCaA')"
+                                    
+                                        >Transcrição I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="n6EPT29Ab2k" onclick="openVideo('n6EPT29Ab2k')"
+                                    
+                                        >Transcrição do DNA II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="B7XEaafYNNk" onclick="openVideo('B7XEaafYNNk')"
+                                    
+                                        >Tradução</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse6">
+                        Química da Célula
+                      </a>
+                    </div>
+                    <div id="collapse6" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="sOSzUrPuba0" onclick="openVideo('sOSzUrPuba0')"
+                                    
+                                        >Proteínas</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="vX64TGMdeR8" onclick="openVideo('vX64TGMdeR8')"
+                                    
+                                        class="watching_video">DNA - Estrutura </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="NMObWWt_yrc" onclick="openVideo('NMObWWt_yrc')"
+                                    
+                                        class="watching_video">DNA - replicação </a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="slbqqALkCaA" onclick="openVideo('slbqqALkCaA')"
+                                    
+                                        >Transcrição I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="n6EPT29Ab2k" onclick="openVideo('n6EPT29Ab2k')"
+                                    
+                                        >Transcrição do DNA II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="B7XEaafYNNk" onclick="openVideo('B7XEaafYNNk')"
+                                    
+                                        >Tradução</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#class-panel" href="#collapse7">
+                        Reinos do Mundo Vivo
+                      </a>
+                    </div>
+                    <div id="collapse7" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <ol>
+                            
+                                <li><a href="#" id="4Ci-8MqA-gY" onclick="openVideo('4Ci-8MqA-gY')"
+                                    
+                                        >Reino Fungi</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="WuqZtZKVAmI" onclick="openVideo('WuqZtZKVAmI')"
+                                    
+                                        >Monera I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="k7uBYmL40bY" onclick="openVideo('k7uBYmL40bY')"
+                                    
+                                        >Monera II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="dPqiFEH9Ri0" onclick="openVideo('dPqiFEH9Ri0')"
+                                    
+                                        >Protista I</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="iw0qp1zM-Us" onclick="openVideo('iw0qp1zM-Us')"
+                                    
+                                        >Protista II</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                                <li><a href="#" id="gHaON90BO6k" onclick="openVideo('gHaON90BO6k')"
+                                    
+                                        >Vírus</a>
+                                    
+                                    </a>
+                                </li>
+                            
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+    </div>
+
+    </div>
+</div>
+
+        </div>
+        <!-- ends wrapper -->
+
+        <!-- starts footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row copyright">
+                    <div class="span3">
+                        <a href="https://www.facebook.com/polinize" class="social fb" target="_blank">
+                            <i class="i_facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com/projetopolinize" class="social tw" target="_blank">
+                            <i class="i_twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/projetopolinize" class="social yt" target="_blank">
+                            <i class="i_youtube"></i>
+                        </a>
+                    </div>
+                    <div class="span5 footer-middle">
+                        <a href="/">Início</a> | 
+                        <a href="/sobre/">Sobre</a> | 
+                        <a href="/como-funciona/">Como funciona</a> | 
+                        <a href="/contato/">Contato</a> | 
+                        <a href="/termos/">Termos</a> | 
+                        <a href="http://polinize.blog.br" target="_blank">Blog</a> | 
+                        <a href="/faq/">Dúvidas</a> 
+                    </div>
+                    <div class="span2 offset2 copy">
+                        <p>2013 - Polinize</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScripts -->
+
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.bgiframe.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.autocomplete.js"></script>
+        <script type="text/javascript" src="/static/js/tag_autocomplete.js"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/theme.js"></script>
+
+        
+<script>
+//BEGIN BORGES
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+$.ajaxSetup({
+beforeSend: function(xhr, settings) {
+    if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+        // Only send the token to relative URLs i.e. locally.
+        xhr.setRequestHeader("X-CSRFToken",
+                             $('input[name="csrfmiddlewaretoken"]').val());
+    }
+}
+});
+//END BORGES
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "//www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player;
+  var activeVideoId;
+  function onYouTubeIframeAPIReady() {
+    activeVideoId =  'sZolyh8GfTI';
+    player = new YT.Player('player', {
+      height: '300',
+      width: '580',
+      videoId: activeVideoId,
+      playerVars: {
+          'rel':0,
+          'showinfo':0,
+          'autohide':1,
+          'theme':'light',
+          'wmode':'transparent',
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  // 4. The API will call this function when the video player is ready.
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+
+  // 5. The API calls this function when the player's state changes.
+  //    The function indicates that when playing a video (state=1),
+  //    the player should play for six seconds and then stop.
+  var done = false;
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        $('#'+activeVideoId).css('color', 'green');
+        $('#'+activeVideoId).addClass('watching_video');
+        $.ajax({
+            type:"POST",
+            url:"playing/",
+            dataType: "json",
+            data: {
+                dados: 'I am watching the video: ' + activeVideoId,
+                video_youtube_id : activeVideoId
+            },
+            statusCode: {
+                200: function() {
+                }
+            }
+        });
+    }
+    if (event.data == YT.PlayerState.ENDED) {
+        $('#'+activeVideoId).css('text-decoration','line-through');
+        $('#'+activeVideoId).addClass('watched_video');
+        $.ajax({
+            type:"POST",
+            url:"played/",
+            dataType: "json",
+            data: {
+                dados: 'I watched the video: ' + activeVideoId,
+                video_youtube_id: activeVideoId
+            },
+            statusCode: {
+                200: function() {
+                }
+            }
+        });
+
+    }
+    else if(event.data == YT.PlayerState.PLAYING) {
+    }
+  }
+    function openVideo(url) {
+        activeVideoId = url;
+        player.loadVideoById(activeVideoId);
+    }   
+</script>
+
+    
+        
+    </body>
+</html>

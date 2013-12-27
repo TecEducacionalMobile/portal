@@ -1,0 +1,181 @@
+/* Replace the gray background with something that matches your colors.  You can use .pngs with alpha transparency. If you don't use an image, you need to remove ours*/
+
+
+#header { 
+  background: url("http://portal.tecnologiamobile.com.br/static/img/header_background.png") no-repeat;
+  /* OR background-image: none; 
+  background-color: #EBF5FA;*/
+}
+
+
+/*replace the canvas logo with your logo*/
+#header-logo{
+  background: url("http://portal.tecnologiamobile.com.br/static/img/inside_umd_logo.png") no-repeat;
+  margin-top: 10px;
+  width: 300px;
+  height: 50px;
+  position: relative;
+  float:left;
+  clear:both;
+}
+#header.no-user #header-logo {
+  background: url("http://portal.tecnologiamobile.com.br/static/img/inside_umd_logo.png") no-repeat;
+  margin-top: -39px;
+  width: 300px;
+  height: 50px;
+  position: relative;
+  float:left;
+  clear:both;
+}
+body {
+  background-color: #EFECE5;
+  background-image: none;
+}
+
+
+/*if you replace the left canvas logo, move a smaller one to the right side of the header--I made the image gray first*/
+#header-logo-secondary {
+background: url("http://portal.tecnologiamobile.com.br/static/img/logos/logo-01.png") no-repeat;
+display: block;
+right: 2px;
+height: 50px;
+width: 143px;
+}
+#header {
+    min-height: 71px;
+}
+/*if your logo is bigger, you can make room like this*/
+#menu { margin-left: 200px; }
+
+/*change the identity bar (the area that says "Hilary Scharton Inbox Settings Logout Help)*/
+#identity {
+  background-image: none;
+  background-color: #A1C42E;
+}
+
+/*change the color of the identity text*/
+#identity a { color: black; }
+/*change the color of the circle around the number of unread inbox messages*/
+#identity .inbox a .unread-messages-count { background-color: #F2F0DD; }
+#identity #identity-help-container a { color: black; }
+
+/*change the color of the menu items (courses & groups etc.). If the text looks fuzzy, remove the text shadow.*/
+.menu-item .menu-item-title, .menu-item .menu-item-no-drop {
+  color: #FAFBF4;
+  text-shadow: none;
+}
+
+
+body.modal
+#footer {
+
+margin-left:auto;
+margin-right:auto;
+width: 507px;
+}
+
+.menu-item .menu-item-title,
+.menu-item .menu-item-no-drop {
+
+
+}
+
+.menu-item.hover .menu-item-title{
+	color:#555555 !important;
+}
+
+/* Customizations for Turning Point OAuth Screen */
+
+
+#modal-box p {
+
+margin-top: 80px;
+
+
+}
+#modal-box h2 {
+visibility: hidden;
+}
+
+/* Customizations for Alternate Log-in Screen and LDAP log-in screen */
+
+
+body.modal #modal-box.login-box {
+
+background: url("http://portal.tecnologiamobile.com.br/static/img/background.png") no-repeat;
+
+}
+
+body.modal #modal-box .btn, body.modal #login-box .btn  {
+
+background: #ffffff; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: -moz-linear-gradient(top,  #ffffff 0%, #e6e6e6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#e6e6e6 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#e6e6e6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-8 */
+border-color: #dddddd;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif;
+
+}
+
+body.modal #modal-box-inner{
+
+background: url("http://portal.tecnologiamobile.com.br/static/img/inside_umd_logo.png") no-repeat;
+background-origin: content-box;
+margin: 45px 0 10px 0px;
+height:315px;
+
+}
+
+body.modal #modal-box.login-box h1 {
+
+background: url("http://portal.tecnologiamobile.com.br/static/img/logos/logo-03.png") no-repeat;
+float:right;
+height:75px;
+width: 150px;
+
+}
+
+#login_form {
+
+clear:both;
+}
+
+/*Forgot Password secondary screen */
+
+#forgot_password_form p {
+
+visibility: hidden;
+}
+
+#forgot_password_form {
+
+width: 550px;
+position: relative;
+top: 30px;
+
+}
+
+body.modal #modal-box.login-box a {
+    color: #ffffc5 !important;
+}
+
+
+/* Custom Footer on Login Screen */
+
+.customFooter {
+width: 100%;
+position: relative;
+color: red;
+}
+
+
+#wrapper {background-color: #EFECE5;}
+#wrapper-container {background-color: #EFECE3;}

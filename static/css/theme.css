@@ -1,0 +1,12 @@
+body {
+    position: relative;
+    padding-top: 69px;
+    background: #d6d6d6 url(../images/bg-texture.ae64887d36d1.png) repeat left top;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Karla', sans-serif !important;
+    color: #333;
+    font-size: 15px;
+}
+.accordion-inner{
+    background: #DDDCE2 url(../img/content_bg.jpg) repeat left top;
+}

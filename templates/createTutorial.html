@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% set active_page='tutorials' %}
+{% block content %}
+<form action='/createTutorial' method="POST">
+	<input type="text" name="name" placeholder="nome"></input>
+	<input type="text" name="link" placeholder="link"></input>
+	<input type="text" name="image_link" placeholder="image_link"></input>
+	<input type="text" name="description" placeholder="descrição"></input>
+	<input type="text" name="instructor" placeholder="instrutor"></input>
+	<input type="text" name="free" placeholder="gratuito"></input>
+	<button type="submit" class="btn-primary btn">Criar</button>
+
+
+
+{% endblock content %}

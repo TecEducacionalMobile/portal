@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set active_page='tutorials' %}
+{% block content %}
+<div class="container">
+	<div class="page-header">
+		<h1>Tutoriais</h1><br>
+		<p class="lead">Aqui você encontra uma série de tutoriais que podem auxiliá-lo(a) no uso de recursos tecnológicos voltados para a educação. A equipe de Tecnologia Educacional também está à disposição dos professores que queiram receber orientações sobre os recursos tecnológicos oferecidos. Para entrar em contato, mande um email para <a href="mailto:tec.educacional@escolamobile.com.br">tec.educacional@escolamobile.com.br</a>.</p>
+	</div>
+	<div class="row-fluid">
+		<ul class="thumbnails">
+			{% for tutorial in tutorials %}
+				<li class="span4">
+					<div class="thumbnail">
+						<img src="{{tutorial.image_link}}" style="height:200px;width:300px">
+						<div class="caption">
+							<center><h4>{{tutorial.name}}</h4></center>
+							<p>{{tutorial.description}}</p>
+							<p class="text-success">Autor: {{tutorial.instructor}}</p>
+							<p><a href='{{tutorial.link}}' target="_blank" class="btn btn-primary">Ver Curso</a></p>
+						</div>
+					</div>
+				</li>
+			{% if loop.index is divisibleby 3 %}
+		</ul>
+	</div>
+	<div class="row-fluid">
+		<ul class="thumbnails">
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+{% endblock content %}

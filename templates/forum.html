@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% set active_page='forum' %}
+{% block content %}
+<div class="container">
+<!-- Google Forum Code !-->
+{% if user %}
+	<iframe id="forum_embed"
+	  src="javascript:void(0)"
+	  scrolling="no"
+	  frameborder="0"
+	  width="100%"
+	  height="700">
+	</iframe>
+	<script type="text/javascript">
+	  document.getElementById('forum_embed').src =
+	     'https://groups.google.com/forum/embed/?place=forum/tec-educacional'
+	     + '&showsearch=true&showpopout=true&showtabs=false'
+	     + '&parenturl=' + encodeURIComponent(window.location.href);
+	</script>
+{% else %}
+<p class="lead">Esse conteúdo é somente para a comunidade Móbile. Favor efetuar o login. Caso tenha problemas, por favor entrar em contato pelo endereço tec.educacional@escolamobile.com.br</p>
+{% endif %}
+</div>
+<!-- End Google Forum Code !-->
+{% endblock content %}

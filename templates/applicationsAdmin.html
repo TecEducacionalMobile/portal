@@ -1,0 +1,155 @@
+{% extends "baseAdmin.html" %}
+{% set active_page='applications' %}
+{% block content %}
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
+<div class="container">
+	{%if createStatus is defined %}
+		{% if createStatus == "Success" %}
+			<div class="alert alert-success">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <strong>Sucesso!</strong> O aplicativo foi adicionado sem problemas
+			</div>
+		{% else %}
+			<div class="alert alert-error">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <strong>Oops!</strong> Não conseguimos adicionar o seu aplicativo
+			</div>	
+		{% endif %}
+	{% endif %}		
+	<div class="page-header">
+		<h1>Editar Aplicativos</h1><br>
+		<p class="lead">Use o formulário abaixo para editar um aplicativo. Por enquanto, não há como deletar um aplicativo</p>
+	</div>
+	<div class="row">
+		<div class="span6 offset3">
+			<form class="form-horizontal" action='/applicationsAdmin' method="POST">
+				<div class="control-group">
+					<label class="control-label" for="name">Nome do Aplicativo</label>
+					<div class="controls">
+					<input type="text" name="name" placeholder="Nome"></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="link">Link para o Aplicativo</label>
+					<div class="controls">
+					<input type="text" name="link" placeholder="link"></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Tipo de <i>device</i></label>
+					<div class="controls">
+					<select name="device">
+						{% for item in devices %}
+						<option value="{{item}}">{{item}}</option>
+						{% endfor %}
+					</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Utilidade</label>
+					<div class="controls">
+					<select name="utility">
+						{% for item in utility %}
+						<option value="{{item}}">{{item}}</option>
+						{% endfor %}
+					</select>							</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Disciplina</label>
+					<div class="controls">		
+					<select name="subject">
+						{% for item in subjects %}
+						<option value="{{item}}">{{item}}</option>
+						{% endfor %}
+					</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="name">Imagem</label>
+					<div class="controls">
+					<input type="text" name="image" placeholder="Nome"></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Descrição</label>
+					<div class="controls">
+					<textarea class="span4" id="descript" rows="5" name="description" placeholder="descrição" onKeyDown="limitText(this.form.descript,this.form.countdown,500);" 
+onKeyUp="limitText(this.form.descript,this.form.countdown,500);"></textarea>
+					<div class="alert alert-info">Você tem <input class="input-mini" readonly type="text" name="countdown" size="3" value="500"> caractéres disponíveis</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Instalado?</label>
+					<div class="controls">
+					<select name="installed">
+						<option value="true">Sim</option>
+						<option value="false">Não</option>
+					</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Gratuito?</label>
+					<div class="controls">
+					<select name="free">
+						<option value="true">Sim</option>
+						<option value="false">Não</option>
+					</select>
+					</div>
+				</div>
+				<div>
+				<center>
+				<button type="submit" class="btn-primary btn">Criar</button>
+				<button type="button" class="btn">Cancelar</button></center>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="page-header">
+		<h1>Remover Aplicativos</h1>
+		<p> Abaixo está a lista alfabética dos nossos aplicativos. Note que não há como editar um aplicativo - você precisa deletar o existente e criar um novo.</p>
+	</div>
+	<div class="row">
+	    {% for app in apps %}
+		<div class="span5">
+			<div class="media well">
+				<a class="pull-left" href="{{app.app_link}}" target-"_blank">
+					<img class="media-object image-rounded" src="{{app.app_image}}" style="width:64px;height:64px">
+				</a>
+		 	   <div class="media-body">
+					<h4 class="media-heading"><a href="{{app.app_link}}" target="_blank">{{app.app_name}}</a></h4>
+					<p>{{app.app_description}}</p>
+					<span class="label label-inverse">{{app.app_device}}</span>
+					<span class="label label-info">{{app.app_utility}}</span>
+					{% if app.app_free %}
+					<span class="label label-success">Gratuito</span>
+					{% else %}
+					<span class="label label-warning">Pago</span>
+					{% endif %}
+					{% if app.app_installed %}
+					<span class="label label-success">Instalado</span>
+					{% else %}
+					<span class="label label-warning">Não Instalado</span>
+					{% endif %}
+					<span class="label">{{app.app_subject}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="span1">
+			<a href="/applications/edit/{{app.key()}}"><button class="btn btn-danger"><i class="icon-pencil icon-white"></i></button></a>
+		</div>
+		{% if loop.index is divisibleby 2 %}
+		</div>
+		<div class="row">
+		{% endif %}
+	{% endfor %}
+	</div>
+</div>
+{% endblock content %}

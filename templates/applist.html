@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% set active_page='applications' %}
+{% set devices = ['Todos','iPad','Web','PC','MacOSX','Android']%}
+{% set subjects = ['Todos','Biologia','Português','Inglês','Filosofia','História','Geografia','Ética e Cidadania','Matemática','Física','Química','Espanhol','Música'] %}
+{% set utility = ['Todos','Apresentações','Anotações','Audio/Video','Jogos/Raciocínio','Enquetes e Questionários','Videoaulas','Didático','Outros'] %}
+{% block content %}
+<div class="container">
+	<div class="page-header">
+		<h1>Aplicativos</h1><br>
+		<p class="lead">Aqui você encontra um banco de aplicativos interessantes, além de outros recursos digitais. Este banco será constantemente atualizado a partir de sugestões enviadas (<a href="mailto:tec.educacional@escolamobile.com.br">tec.educacional@escolamobile.com.br</a>) por nossos professores para que possamos compartilhar com toda a equipe. É possível consultar a lista completa de aplicativos ou refinar a busca aplicando alguns filtros.</p>
+		<form class="form-inline" method="POST">
+			Funciona em: 
+			<select name="device" class="span2">
+			{% for item in devices %}
+			  <option value="{{item}}">{{item}}</option>
+			{% endfor %}
+			</select>
+			Utilidade:
+			<select name="utility" class="span2">
+			 {% for item in utility %}
+			 <option value="{{item}}">{{item}}</option>
+			 {% endfor %}
+			</select>
+			Disciplina:
+			<select name="subject" class="span2">
+			{% for item in subjects %}
+			 <option value="{{item}}">{{item}}</option>
+			{% endfor %}
+			</select>
+			Gratuito:
+			<select name="free" class="span2">
+			 <option value="Todos">Todos</option>
+			 <option value="Sim">Sim</option>
+			 <option value="Não">Não</option>
+			</select>
+
+			<button type="submit" class="btn-primary btn">Filtrar</button>
+
+		</form>
+	</div>
+	<div class="row">
+	    {% for app in apps %}
+		<div class="span6">
+			<div class="media well">
+				<a class="pull-left" href="{{app.app_link}}" target="_blank">
+					<img class="media-object image-rounded" src="{{app.app_image}}" style="width:64px;height:64px">
+				</a>
+			    <div class="media-body">
+					<h4 class="media-heading"><a href="{{app.app_link}}" target="_blank">{{app.app_name}}</a></h4>
+					<p>{{app.app_description}}</p>
+					<span class="label label-inverse">{{app.app_device}}</span>
+					<span class="label label-info">{{app.app_utility}}</span>
+					{% if app.app_free %}
+					<span class="label label-success">Gratuito</span>
+					{% else %}
+					<span class="label label-warning">Pago</span>
+					{% endif %}
+					{% if app.app_installed %}
+					<span class="label label-success">Instalado</span>
+					{% else %}
+					<span class="label label-warning">Não Instalado</span>
+					{% endif %}
+					<span class="label">{{app.app_subject}}</span>
+			    </div>
+			</div>
+		</div>
+		{% if loop.index is divisibleby 2 %}
+		</div>
+		<div class="row">
+		{% endif %}
+	{% endfor %}
+</div>
+{% endblock content %}

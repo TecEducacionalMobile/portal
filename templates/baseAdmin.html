@@ -1,0 +1,109 @@
+{% set devices = ['Todos','iPad','Web','PC/Windows','MacOSX','Android']%}
+{% set subjects = ['Todos','Biologia','Português','Inglês','Filosofia','História','Geografia','Ética e Cidadania','Matemática','Física','Química','Espanhol','Música'] %}
+{% set utility = ['Apresentações','Anotações','Audio/Video','Jogos/Raciocínio','Enquetes e Questionários','Videoaulas','Didático','Outros'] %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tecnologia Educacional Escola Móbile</title>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+      <!-- // <script src="https://towtruck.mozillalabs.com/towtruck.js"></script> -->
+
+  </head>
+  <body style="">
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-inner">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" style="padding-bottom:1px" data-toggle="collapse" data-target=".nav-collapse">
+      <i class="icon-home"></i>
+      </a>
+          <a class="brand hidden-phone" href="/admin" style="padding-bottom:5px;overflow:visible"><img src="/static/img/logo.png" style="height:25px"> Tecnologia Educacional - ADMINISTRADOR</a>
+          <a class="brand visible-phone" href="/admin" style="padding-bottom:5px;overflow:visible"><img src="/static/img/logo.png" style="height:25px"> Tec. Educacional</a>
+<!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+      
+            {% set navigation_bar = [('/admin','home',"Home"),('/applicationsAdmin','applications',"Aplicativos"),('/reservaAdmin','reserva',"Reserva"),('http://teceducacional.tumblr.com','blog',"Blog"),('/tutorialsAdmin','tutorials',"Tutoriais"),('/linksAdmin','links',"Links")]%}
+          	<ul id="navigation" class="nav pull-right">
+      		    {% for href, id, caption in navigation_bar %}
+                <li{% if id == active_page %} class="active"{% endif
+                %}><a href="{{ href|e }}"{% if id == 'blog' %}target="_blank"{% endif %}>{{ caption|e }}</a></li>
+              {% endfor %}
+                <!-- <li><button onclick="TowTruck(this); return false;" class="btn btn-primary">Colaborar!</button></li> -->
+              {% if user %}
+                <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.nickname()}}<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="{{logoutURL}}">Logout</a></li>
+                        </ul>
+                </li>
+              {% else %}
+                <li><a href="{{loginURL}}">Login</a></li>
+              {% endif %}
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="container" style="padding-top:40px">
+		  
+  {% block content %}
+    Admin content goes here!!!!
+  {% endblock content %}
+    </div>
+  </body>
+        <script src="http://code.jquery.com/jquery.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="/static/js/bootstrap.js"></script>
+      <script type="text/javascript">  
+  function ChangeContents() 
+  {  
+    if (httpRequest.readyState === 4) 
+    {  
+      if (httpRequest.status === 200) 
+      {  
+        $("#content").html(httpRequest.responseText);  
+      } else 
+      {  
+        alert(httpRequest.status);  
+      }  
+    }  
+  }  
+function makeRequests(type, url, f, data) 
+{  
+if (window.XMLHttpRequest) 
+  { // Mozilla, Safari, ...  
+  httpRequest = new XMLHttpRequest();  
+  } else if (window.ActiveXObject) { // IE  
+    try {  
+    httpRequest = new ActiveXObject("Msxml2.XMLHTTP");  
+        }   
+  catch (e) {  
+    try {  
+      httpRequest = new ActiveXObject("Microsoft.XMLHTTP");  
+    }   
+    catch (e) {}  
+  }  
+}  
+
+    if (!httpRequest) 
+    {  
+      alert('Giving up :( Cannot create an XMLHTTP instance');  
+      return false;  
+    }  
+    httpRequest.onreadystatechange = f;  
+    httpRequest.open(type, url, false); 
+    if (type == 'GET'){
+        httpRequest.send();  
+    } 
+    else
+      httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      httpRequest.send(data);
+    
+  }  
+</script>
+
+      <!-- Optionally enable responsive features in IE8 -->
+</html>

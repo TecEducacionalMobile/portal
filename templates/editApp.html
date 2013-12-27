@@ -1,0 +1,120 @@
+{% extends "baseAdmin.html" %}
+{% set active_page='applications' %}
+{% block content %}
+<script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
+<div class="container">
+	{%if createStatus is defined %}
+		{% if createStatus == "Success" %}
+			<div class="alert alert-success">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <strong>Sucesso!</strong> O aplicativo foi adicionado sem problemas
+			</div>
+		{% else %}
+			<div class="alert alert-error">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <strong>Oops!</strong> Não conseguimos adicionar o seu aplicativo
+			</div>	
+		{% endif %}
+	{% endif %}		
+	<div class="page-header">
+		<h1>Editar Um Aplicativo</h1><br>
+		<p class="lead">Use o formulário abaixo para editar um aplicativo</p>
+	</div>
+	{% if appFound %}
+	<div class="row">
+		<div class="span6 offset3">
+			<form class="form-horizontal" action='/applications/edit/{{app.key()}}' method="POST">
+				<input type="hidden" name='appID' value='{{app.key()}}'></input>
+				<div class="control-group">
+					<label class="control-label" for="name">Nome do Aplicativo</label>
+					<div class="controls">
+					<input type="text" name="name" placeholder="Nome" value='{{app.app_name}}'></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="link">Link para o Aplicativo</label>
+					<div class="controls">
+					<input type="text" name="link" placeholder="link" value='{{app.app_link}}'></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Tipo de <i>device</i></label>
+					<div class="controls">
+					<select name="device">
+						{% for item in devices %}
+						<option value="{{item}}" {% if item == app.app_device %} selected {% endif %}>{{item}}</option>
+						{% endfor %}
+					</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Utilidade</label>
+					<div class="controls">
+					<select name="utility">
+						{% for item in utility %}
+						<option value="{{item}}" {% if item == app.app_utility %} selected {% endif %}>{{item}}</option>
+						{% endfor %}
+					</select>							</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Disciplina</label>
+					<div class="controls">		
+					<select name="subject">
+						{% for item in subjects %}
+						<option value="{{item}}" {% if item == app.app_subject %} selected {% endif %}>{{item}}</option>
+						{% endfor %}
+					</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="name">Imagem</label>
+					<div class="controls">
+					<input type="text" name="image" placeholder="Nome" value='{{app.app_image}}'></input>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Descrição</label>
+					<div class="controls">
+					<textarea class="span4" id="descript" rows="5" name="description" onKeyDown="limitText(this.form.descript,this.form.countdown,500);" 
+onKeyUp="limitText(this.form.descript,this.form.countdown,500);">{{app.app_description}}</textarea>
+					<div class="alert alert-info">Você tem <input class="input-mini" readonly type="text" name="countdown" size="3" value="500"> caractéres disponíveis</div>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Instalado?</label>
+					<div class="controls">
+					<select name="installed">
+						<option value="true" {% if app.app_installed == True %}selected {% endif %}>Sim</option>
+						<option value="false" {% if app.app_installed == False %}selected {% endif %}>Não</option>
+					</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Gratuito?</label>
+					<div class="controls">
+					<select name="free">
+						<option value="true" {% if app.app_free == True %}selected {% endif %}>Sim</option>
+						<option value="false" {% if app.app_free == False %}selected {% endif %}>Não</option>
+					</select>
+					</div>
+				</div>
+				<div>
+				<center>
+				<button type="submit" class="btn-primary btn">Salvar</button>
+				<button type="button" class="btn">Cancelar</button></center>
+				</div>
+			</form>
+		</div>
+	</div>
+	{% endif %}
+</div>
+
+{% endblock content %}

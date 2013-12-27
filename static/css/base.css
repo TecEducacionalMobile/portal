@@ -1,0 +1,225 @@
+
+    height:100%;
+}
+.navbar-inner {
+    /*background:url("/static/img/header-back.png") black repeat;*/
+    background:#fcf3d5;
+}
+#logo {
+    padding: 3px 10px 0px;
+}
+.row-fluid {
+    margin-top:10px;
+}
+#collapse-btn {
+    background:black;
+}
+.footer {
+    border-top: 1px solid #e5e5e5;
+    background: #ffffff;
+    width:100%;
+    /*background-color:#fcf3d5;*/
+    background-image: -moz-linear-gradient(top,#dddddd,#dddddd);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#dddddd),to(#dddddd));
+    background-image: -webkit-linear-gradient(top,#dddddd,#dddddd);
+    background-image: -o-linear-gradient(top,#dddddd,#dddddd);
+    background-image: linear-gradient(to bottom,#dddddd,#dddddd);
+}
+#left-menu {
+    background-color:white;
+}
+.user-menu {
+    background-color:#f5f5f5;
+    clear:both;
+}
+.user-info {
+    margin-bottom:10px;
+    padding:0 19px;
+}
+@media (min-width: 1200px) {
+    .user-info {
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .user-name, .user-points {
+        text-align:center;
+        padding-top:5px;
+    }
+    .user-points{
+        padding-top:0px;
+    }
+    .footer div {
+        text-align:center;
+        padding-top:5px;
+    }
+}
+.profile-picture {
+    text-align:center;
+}
+.user-points{
+    padding-top:5px;
+    font-size:smaller;
+
+}
+.logout-button {
+    font-size:smaller;
+}
+#content {
+    min-height:600px;
+}
+#footer-sobre {
+    padding-right:30px;
+    font-size:smaller;
+}
+
+.no-margin {
+    margin:0 !important;
+}
+.login-header {
+    padding-top:8px;
+}
+
+/* Borges */
+.question {
+    background-color: #ffffff;
+    border: solid 1px #aaaaaa;
+    box-shadow: 4px 4px 2px #cccccc;
+}
+
+.answer {
+    background-color: #ffffff;
+    border: solid 1px #aaaaaa;
+    box-shadow: 4px 4px 2px #cccccc;
+}
+
+a, .title{
+    color: #d4c579;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d4c579;
+    text-decoration: none;
+}
+
+.tag {
+    background-color: #fdf3d5;
+    color: #d4c579;
+    border-bottom: 1px solid #d4c579;
+    border-right: 1px solid #d4c579;
+    text-decoration: none;
+    padding: 3px 4px 3px 4px;
+    margin: 2px 2px 2px 0;
+    text-decoration: none;
+    font-size: 90%;
+    line-height: 2.4;
+    white-space: nowrap;
+}
+
+.tag:hover {
+    color: #fdf3d5;
+    background-color: #d4c579;
+    border-bottom: 1px solid #d4c579;
+    border-right: 1px solid #d4c579;
+    padding: 3px 4px 3px 4px;
+    margin: 2px 2px 2px 0;
+    text-decoration: none;
+    font-size: 90%;
+    line-height: 2.4;
+    white-space: nowrap;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+color: #D4C579;
+text-decoration: none;
+background-color: transparent;
+}
+
+#top-tag {
+    font-size: 16px;
+    float: left
+}
+
+#followunfollow {
+
+}
+
+#perfil-wrapper {
+    display: inline;
+}
+
+#perfil-picture {
+    float:left;
+    width:30%;
+}
+
+#perfil-info {
+    float:left;
+    width:60%;
+    padding-left: 20px;
+}
+
+.answer {
+    border: 1px solid;
+    margin: 5px;
+    padding: 15px;
+}
+
+.thumbnail .imagedropshadow {
+    padding: 5px;
+    border: solid 1px #EFEFEF;
+    opacity:0.7;
+}
+.imagedropshadow:hover {
+    border: solid 1px #CCC;
+    -moz-box-shadow: 0 0 3px 3px #aaa;
+    -webkit-box-shadow: 0 0 3px 3px #aaa;
+    box-shadow: 0 0 3px 3px #aaa;
+    opacity:1;
+    cursor: pointer;
+}
+
+/* end Borges*/
+
+/* Layout de uma coluna  */
+.main-container {
+    margin-top : 15px;
+
+}
+.side-border {
+ border-left: 1px solid #ddd;
+ border-right: 1px solid #ddd;
+ margin-top:0;
+ padding-top:20px;
+}
+.curso-nav {
+ margin-bottom:0;
+ padding-bottom:0;
+
+}
+
+/* Detalhes do curso */
+.curso-demo-video, .curso-classroom-video {
+    position: relative;
+    height: 360px; overflow: hidden;
+    padding-left:30px;
+}
+ .curso-classroom-video iframe,
+.curso-demo-video iframe,
+.curso-demo-video object,
+.curso-demo-video embed {
+    width: 100%;
+    height: 100%;
+}
+
+.curso-classroom-video {
+    margin-bottom:20px;
+    height:500px;
+}
+.curso-classroom-summary {
+    margin-bottom:20px;
+    padding-right:20px;
+
+}
