@@ -1,57 +1,46 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Tecnologia Educacional Escola Móbile</title>
-    <!-- Bootstrap -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
-      <!-- // <script src="https://towtruck.mozillalabs.com/towtruck.js"></script> -->
+	<head>
+		<title>
+			Tecnologia Educacional Móbile
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-fixed-top navbar-inverse " role="navigation">
+			<div class="navbar-header">
+			  	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand" href="/"><img src="/static/img/logo.png" style="height:50px; position:absolute; top:0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tecnologia Educacional</a>
+			</div>
 
-  </head>
-  <body style="">
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="navbar-inner">
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" style="padding-bottom:1px" data-toggle="collapse" data-target=".nav-collapse">
-      <i class="icon-home"></i>
-      </a>
-          <a class="brand hidden-phone" href="/" style="padding-bottom:5px;overflow:visible"><img src="/static/img/logo.png" style="height:25px"> Tecnologia Educacional</a>
-          <a class="brand visible-phone" href="/" style="padding-bottom:5px;overflow:visible"><img src="/static/img/logo.png" style="height:25px"> Tec. Educacional</a>
-<!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse">
-        <!-- .nav, .navbar-search, .navbar-form, etc -->
-      
-            {% set navigation_bar = [('/','home',"Home"),('/applications','applications',"Aplicativos"),('/reserva','reserva',"Reserva"),('http://teceducacional.tumblr.com','blog',"Blog"),('/tutorials','tutorials',"Tutoriais")]%}
-          	<ul id="navigation" class="nav pull-right">
-      		    {% for href, id, caption in navigation_bar %}
-                <li{% if id == active_page %} class="active"{% endif
-                %}><a href="{{ href|e }}" {% if id == 'blog' %}target="_blank"{% endif %}>{{ caption|e }}</a></li>
-              {% endfor %}
-                <!-- <li><button onclick="TowTruck(this); return false;" class="btn btn-primary">Colaborar!</button></li> -->
-              {% if user %}
-                <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.nickname()}}<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="{{logoutURL}}">Logout</a></li>
-                        </ul>
-                </li>
-              {% else %}
-                <li><a href="{{loginURL}}">Login</a></li>
-              {% endif %}
-            </ul>
-        </div>
-        </div>
-    </div>
-    <div class="container" style="padding-top:40px">
-		  
-  {% block content %}
-  {% endblock content %}
-    </div>
-  </body>
-        <script src="https://code.jquery.com/jquery.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="/static/js/bootstrap.js"></script>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="#navbar-collapse-1">
+		  		<ul class="nav navbar-nav navbar-right">
+			    {% set navigation_bar = [('/','home',"Home"),('/applications','applications',"Aplicativos"),('/reserva','reserva',"Reserva"),('http://teceducacional.tumblr.com','blog',"Blog"),('/tutorials','tutorials',"Tutoriais")]%}
+			    {% for href, id, caption in navigation_bar %}
+				    <li{% if id == active_page %} class="active"{% endif%}>
+					    <a href="{{ href|e }}" {% if id == 'blog' %}target="_blank"{% endif %}>{{ caption|e }}</a>
+					</li>
+			    {% endfor %}
+			    
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			    	<li> </li>
+			    </ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+		<div class="container" style="padding-top:40px">
 
-      <!-- Optionally enable responsive features in IE8 -->
+			{% block content %}
+			{% endblock content %}
+		</div>
+	</body>  
+	<script src="https://code.jquery.com/jquery.js"></script>
+	  <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </html>

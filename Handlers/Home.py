@@ -19,18 +19,18 @@ class Reserva(Handler):
 
 class IpadReservation(Handler):
 	def get(self):
-		show = ""
-		for key in self.request.params:
-			show += "key: " + key + " Val: " + self.request.params[key]
-		self.response.out.write(show)
-		# user = users.get_current_user()
-		# if self.request.get('reserved') == 'true':
-		# 	self.render('iPadConfirmationPage.html')
-		# else:
-		# 	params = {}
-		# 	params['name'] = self.request.get()
+		# show = ""  # THIS IS ALL THE LTI STUFF
+		# for key in self.request.params:
+		# 	show += "key: " + key + " Val: " + self.request.params[key]
+		# self.response.out.write(show)
+		user = users.get_current_user()
+		if self.request.get('reserved') == 'true':
+			self.render('iPadConfirmationPage.html')
+		else:
+			params = {}
+			params['name'] = ""
 
-		# 	self.render('iPadReservationForm.html',params = params)
+			self.render('iPadReservationForm.html',params = params)
 
 class Applications(Handler):
 	def get(self):

@@ -4,7 +4,6 @@
 {% set subjects = ['Todos','Biologia','Português','Inglês','Filosofia','História','Geografia','Ética e Cidadania','Matemática','Física','Química','Espanhol','Música'] %}
 {% set utility = ['Todos','Apresentações','Anotações','Audio/Video','Jogos/Raciocínio','Enquetes e Questionários','Videoaulas','Didático','Outros'] %}
 {% block content %}
-<div class="container">
 	<div class="page-header">
 		<h1>Aplicativos</h1><br>
 		<p class="lead">Aqui você encontra um banco de aplicativos interessantes, além de outros recursos digitais. Este banco será constantemente atualizado a partir de sugestões enviadas (<a href="mailto:tec.educacional@escolamobile.com.br">tec.educacional@escolamobile.com.br</a>) por nossos professores para que possamos compartilhar com toda a equipe. É possível consultar a lista completa de aplicativos ou refinar a busca aplicando alguns filtros.</p>
@@ -40,7 +39,7 @@
 	</div>
 	<div class="row">
 	    {% for app in apps %}
-		<div class="span6">
+		<div class="col-md-6">
 			<div class="media well">
 				<a class="pull-left" href="{{app.app_link}}" target="_blank">
 					<img class="media-object image-rounded" src="{{app.app_image}}" style="width:64px;height:64px">
@@ -48,7 +47,7 @@
 			    <div class="media-body">
 					<h4 class="media-heading"><a href="{{app.app_link}}" target="_blank">{{app.app_name}}</a></h4>
 					<p>{{app.app_description}}</p>
-					<span class="label label-inverse">{{app.app_device}}</span>
+					<span class="label label-primary">{{app.app_device}}</span>
 					<span class="label label-info">{{app.app_utility}}</span>
 					{% if app.app_free %}
 					<span class="label label-success">Gratuito</span>
@@ -60,7 +59,7 @@
 					{% else %}
 					<span class="label label-warning">Não Instalado</span>
 					{% endif %}
-					<span class="label">{{app.app_subject}}</span>
+					<span class="label label-danger">{{app.app_subject}}</span>
 			    </div>
 			</div>
 		</div>
@@ -69,5 +68,4 @@
 		<div class="row">
 		{% endif %}
 	{% endfor %}
-</div>
 {% endblock content %}
