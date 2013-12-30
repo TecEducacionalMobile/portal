@@ -8,24 +8,24 @@
 		http://www.imsglobal.org/xsd/imsbasiclti_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imsbasiclti_v1p0.xsd
 		http://www.imsglobal.org/xsd/imslticm_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imslticm_v1p0.xsd
 		http://www.imsglobal.org/xsd/imslticp_v1p0 http://www.imsglobal.org/xsd/lti/ltiv1p0/imslticp_v1p0.xsd">
-		<blti:title>Reserva de iPads</blti:title>
-		<blti:description>Use este aplicativo para reservar iPads na sua sala</blti:description>
+		<blti:title>Tecnologia Educacional</blti:title>
+		<blti:description>Portal da Tecnologia Educacional</blti:description>
 		<blti:icon></blti:icon>
-		<blti:launch_url>https://5e318cb9.ngrok.com/reservaLTI</blti:launch_url>
+		<blti:launch_url>https://cfc2323.ngrok.com/launchLTI</blti:launch_url>
 		<blti:extensions platform="canvas.instructure.com">
-			<lticm:property name="tool_id">reserva_ipads</lticm:property>
+			<lticm:property name="tool_id">portal_tec</lticm:property>
 			<lticm:property name="privacy_level">public</lticm:property>
-			<lticm:property name="domain">https://5e318cb9.ngrok.com</lticm:property>
+			<lticm:property name="domain">https://cfc2323.ngrok.com</lticm:property>
 			<lticm:options name="course_navigation">
-				<lticm:property name="url">https://5e318cb9.ngrok.com/reservaLTI</lticm:property>
-				<lticm:property name="text">Reserva de iPads</lticm:property>
+				<lticm:property name="url">https://cfc2323.ngrok.com/launchLTI</lticm:property>
+				<lticm:property name="text">Tecnologia Educacional</lticm:property>
 				<lticm:property name="visibility">public</lticm:property>
 				<lticm:property name="default">enabled</lticm:property>
 				<lticm:property name="enabled">true</lticm:property>
 			</lticm:options>
 			<lticm:options name="user_navigation">
-				<lticm:property name="url">https://5e318cb9.ngrok.com/reservaLTI</lticm:property>
-				<lticm:property name="text">Reserva de iPads</lticm:property>
+				<lticm:property name="url">https://cfc2323.ngrok.com/launchLTI</lticm:property>
+				<lticm:property name="text">Tecnologia Educacional</lticm:property>
 				<lticm:property name="enabled">true</lticm:property>
 			</lticm:options>
 		</blti:extensions>
